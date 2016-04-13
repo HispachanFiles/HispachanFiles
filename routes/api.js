@@ -15,13 +15,7 @@ function parseResponse(req, res, data, root) {
         res.jsonp(data);
     }
     else {
-        res.contentType("application/xml");
-        res.end(js2xmlparser(root, data, {
-            arrayMap: {
-                replies: "reply",
-                threads: "thread"
-            }
-        }));
+        res.end('No soportado aún.');
     }
 }
 

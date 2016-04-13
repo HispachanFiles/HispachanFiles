@@ -21,12 +21,6 @@ router.get('/:board/res/:postId', (req, res, next) => {
             res.jsonp(!err ? data : {status: 404});
             return;
         }
-        // XML Solicitado
-        if (typeof req.query.xml != 'undefined') {
-            res.contentType("application/xml");
-            res.end(js2xmlparser('thread', !err ? data : {status: 404}, { arrayMap: { replies: "reply" } }));
-            return;
-        }
         // No existe el hilo / Se ha producido un error
         if (err)
         {

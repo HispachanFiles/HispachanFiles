@@ -5,9 +5,9 @@ block content
     img(src='/images/apiLogo.png')
     h1 Hispachan Files API
     p De momento, Hispachan Files como tal no tiene una API definida.
-    p Sin embargo, puedes obtener los datos de cualquier hilo en formato JSON o XML
+    p Sin embargo, puedes obtener los datos de cualquier hilo en formato JSON
     br
-    p Símplemente añade ?json o ?xml al final de la URL, por ejemplo
+    p Símplemente añade ?json al final de la URL, por ejemplo
     pre= settings.site.url + '/g/res/2259040.html?json'
     br
     br
@@ -27,8 +27,6 @@ block content
     p(style="opacity:.5") (.html es opcional, si no se específica {pagina}, se obtendrá la página 0)
     p Parsea una página de board entera, incluyendo las 3 últimas respuestas de cada hilo y sus respectivos metadatos
     br
-    h4 Formato XML
-    p Para obtener los datos en formato XML, solo añade ?xml al final de los requests.
     h2 ¿Qué se podrá hacer en un futuro?
     h4 Obtener el catálogo de los boards
     h4 Acceso a las estadísticas públicas de Hispachan
