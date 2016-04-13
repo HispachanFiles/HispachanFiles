@@ -25,7 +25,7 @@ npm start
 ```
 - Abre http://localhost:8000 desde tu navegador
 
-Listo, ahora tienes tu propio HispaFiles para uso persona <s>para guardar tus cepillos</s>.
+Listo, ahora tienes tu propio HispaFiles de uso personal <s>para guardar tus cepillos</s>.
 
 ## Cosas por hacer
 
@@ -46,4 +46,4 @@ Si se te ocurre algo mas, o encuentras un bug, puedes [contactarme](mailto:hispa
 
 Los datos siguen ahí. Si quieres recuperar un hilo guardado en el antiguo HispaFiles, solo pon su URL en el nuevo [HispaFiles](https://www.hispachanfiles.org/).
 
-Ten en cuenta que esto no servirá en la versión presente en este repo, deberás hacerlo en la página principal.
+Ten en cuenta que esto no servirá en la versión presente en este repo, deberás hacerlo en la página oficial.
