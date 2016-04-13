@@ -1,0 +1,25 @@
+//- Pongo esto en un archivo separado para no ponerlo 2 veces en post.jade
+
+//- Metadatos del post
+label
+  //- Esta checkbox está de adorno :^)
+  input(type='checkbox', disabled)
+  //- Título si es un hilo
+  if post.subject
+    span.filetitle= ' ' + post.subject
+  //- Bandera si es un board regional
+  if post.flag
+    span &nbsp;
+    img.bandera(src=post.flag, alt=post.posterCountry, title=post.posterCountryName)
+  span.postername= ' ' + post.posterName
+  span.timer(v-cloak, title='Hispachan Files siempre muestra la hora local.') &nbsp; {{'#{post.date}' | moment 'DD/MM/YY HH:MM'}}
+//- kek
+.mvisible.reflinkposition
+  br
+span.reflink
+  //- Disgusting
+  |  
+  a.reflink2(title='Obtener link a este post', href=settings.site.url+'/'+thread.board+'/res/'+thread.postId+'.html#'+post.postId) /#/&nbsp;
+  a.reflinks(title='ID de post')= post.postId
+//- ??
+.extrabtns

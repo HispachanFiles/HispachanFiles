@@ -1,0 +1,136 @@
+/*
+ *  Porteado desde https://www.hispachan.org/css/img_global.css
+ */
+ 
+form {
+    margin-bottom: 0px;
+    .trap { display: none; }
+}
+
+blockquote {
+    blockquote { margin-left: 0em; }
+    &.reply, &:last-child { margin-bottom: 0em; }
+}
+
+.thumb {
+    border: none;
+    float: left;
+    margin: { top: 2px; bottom: 10px; left: 20px; right: 20px; }
+    max-height: 250px;
+    @include border-radius(5px);
+}
+
+.reply
+{
+    .filesize {
+        margin-left: 20px;
+    }
+}
+
+.replypage .replylink {
+    display: none;
+}
+
+.pagelist {
+    max-width: 600px;
+}
+
+// Descansa en paz, dulce príncipe...
+.spoiler {
+    color: #424242;
+    background-color: #424242;
+    border-radius: 2px;
+    a, a:link, a:visited, a:active, span { text-decoration: none; color: #424242!important; }
+    a:hover, &:hover span { text-decoration: none; color: white !important; }
+}
+
+.extrabtns {
+    vertical-align: middle;
+}
+
+/*
+.hidethread {
+    background: transparent url('./icons/blue/icons.png') -32px -16px no-repeat;
+}
+.unhidethread {
+    background: transparent url('./icons/blue/icons.png') -48px 0px no-repeat;
+}
+.expandthread {
+    background: transparent url('./icons/blue/icons.gif') 0px -16px no-repeat;
+}
+
+.reflinkpreview {
+    position: absolute;
+    padding: 5px;
+    background-color: #F0E0D6;
+    border-radius: 4px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    z-index: 20000;
+    blockquote { padding-left: 3em; }
+    .hideshow, [title^="Buscar"], [title^="Ampliar"] {
+        display: none;
+    }
+}
+*/
+
+.highlight {
+    blockquote { margin-bottom: 0 !important; }
+    .filesize { margin-left: 20px !important; }
+}
+.replybacklinks {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.bandera {
+    margin-right: 1px;
+}
+
+.code {
+    overflow: auto;
+    padding: 10px !important;
+    max-width: 102%!important;
+    max-height: 400px;
+    font-family: monospace;
+    word-wrap: normal;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+    font-size: 120%;
+    margin: { top:10px; bottom: -5px; }
+}
+
+@media only screen and (max-width: 720px) {
+    .code {
+        max-height:300px;
+    }
+}
+
+body .hispaspoiler
+{
+    .thumb, .cellcatalog img, img[src*="/banners/"] {
+        opacity: 0.02;
+        filter: blur(5px);
+    }
+    
+    .thumb[style^="max-"] {
+        opacity: 1 !important;
+        filter: blur(0px)!important;
+    }
+}
+
+// wacala, mathjax
+.MathJax,.MathJax:active {
+    display: inline-table !important;
+}
+
+.timer {
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.ref-futura {
+    pointer-events: none;
+    opacity: .7;
+}

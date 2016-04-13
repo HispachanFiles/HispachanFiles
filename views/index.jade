@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  .ui.container
+    h1
+      | #{settings.site.title} permite guardar hilos de 
+      a(href='https://www.hispachan.org/') hispachan.org
+      |.
+    .ui.icon.input(style='width: 100%;', v-bind:class='archiver.working ? ["disabled", "loading"] : []')
+      input(placeholder='Introduce una URL de Hispachan o Hispachan Files (old).', type='text', v-model='archiver.url', :disabled='archiver.working')
+      i.icon.save.link#saveBtn(v-bind:class='archiver.working ? [] : ["inverted", "circular"]')              
+    div(v-cloak, v-show='archiver.started', style='margin-top: 2em;')
+      .ui.active.progress#archiverProgress
+        .bar: .progress
+        .label
+      .ui.segment(v-if='archiver.hasData')
+        .ui.stackable.grid
+          .three.wide.column
+            img.ui.centered.image(style='height:auto; max-width:100%; background: #333', :src='archiver.data.file.thumb')
+          .thirteen.wide.column
+            h2 {{archiver.data.subject || archiver.url}}
+            p
+              i.icon.comments
+              | {{archiver.data.replyCount}} Respuestas
+            p(v-show="archiver.done", style="color: green") 
+              i.icon.check.circle
+              | Hilo almacenado correctamente
+            p(v-else) Se almacenará en esta url:
+            .ui.action.input(style='width: 100%')
+              input(readonly, v-model='archiver.endUrl')#copyBox
+              button.ui.teal.right.labeled.icon.button#copyBtn
+                i.icon.copy
+                | Copiar
+       center(v-show="!archiver.done && archiver.hasData") Puedes cerrar esta ventana. El hilo seguirá en la cola de almacenamiento.
+    div(v-else)
+      .ui.top.attached.pointing.secondary.menu#mainTabs
+        a.item.active(data-tab='news') Noticias
+      .ui.active.tab(data-tab='news')
+        div(style='margin: 1em;')
+          | !{news}

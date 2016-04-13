@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .v-loading(v-cloak)
+    br
+    center: h1 (...)
+  #hispaBox(v-cloak)
+    br
+    hr
+    .replymode Archivado por última vez {{ #{thread.lastUpdate} | moment 'DD/MM/YY HH:MM'}} (Hora Local).
+    hr
+    div(id='thread'+thread.postId+thread.board)
+      - var post = thread
+      include post
+      each post in thread.replies
+        //- TABLAS?!!
+        table.respuesta.post(id='respuesta'+post.postId)
+          tbody: tr
+            td.doubledash= '>>'
+            td.reply(id='reply'+post.postId)
+              include post
+    hr

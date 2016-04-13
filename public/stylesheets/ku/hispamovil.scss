@@ -1,0 +1,126 @@
+/*
+ *  Porteado desde https://www.hispachan.org/css/hispamovil.css
+ */
+
+.mvisible {
+    display: none!important;
+}
+
+@media only screen and (max-width: 720px) {
+    blockquote, .omittedposts, .postername, .filetitle, .cellcatalog, .botones,
+    .reporte, .boton_post, #bgl_ml, 
+    {
+        font-size: 110%;
+    }
+    
+    blockquote, .filetitle {
+        line-height: 125%;
+    }
+
+    .reflink, .responder {
+        font-size: 115%;
+    }
+
+    .reflinkposition {
+        margin-top: -10px;
+    }
+
+    .responder {
+        margin-top: -8px;
+    }
+
+    .filenamereply {
+        margin-left: -15px !important;
+    }
+
+    .nombrefile {
+        word-wrap: break-word;
+        max-width: 90%;
+    }
+    .numeros {
+        font-size: 125%!important;
+    }
+
+    .logo {
+        font-size: 160%!important;
+    }
+    
+    .largrep {
+        max-width: 125px !important;
+    }
+    
+/*
+    [id^="embed"] {
+        position: relative;
+        padding: { bottom: 56.25%; top: 30px; }
+        height: 0;
+        overflow: hidden;
+        iframe, object, embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    }
+*/
+    table[align="center"] td {
+        display: inline-block;
+        width: 90%!important;
+    }
+
+    table {
+        width: 100%;
+        display: grid;
+        display: -moz-grid;
+        display: -webkit-grid;
+        display: -ms-grid;
+        display: -o-grid;
+        margin-right: 8px;
+    }
+
+    .doubledash,.navbar,.adminbar,#posttypeindicator,.moculto {
+        display: none!important;
+    }
+
+    .mvisible {
+        display: block !important;
+    }
+
+    .thumb {
+        max: { height: 250px; width: 35%; }
+        height: auto;
+        margin: { left: 5px !important; right: 2px; top: 3px; bottom: 3px; }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    blockquote {
+        margin-top:1.4em;
+        margin-left: 0;
+    }
+}
+/*
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?-10f2fc');
+    src: url('fonts/icomoon.eot?#iefix-10f2fc') format('embedded-opentype'),url('fonts/icomoon.woff?-10f2fc') format('woff'),url('fonts/icomoon.ttf?-10f2fc') format('truetype'),url('fonts/icomoon.svg?-10f2fc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],[class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hispa8bit:before {
+    content: "\e600";
+}
+
+[onclick^="embed"] {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+*/

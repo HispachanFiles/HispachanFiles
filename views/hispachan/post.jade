@@ -1,0 +1,39 @@
+if thread.postId != post.postId
+  include postMeta
+if post.file.url
+  span.filesize
+    //- Link a archivo
+    a(target='_blank', href='/'+post.file.url)
+      = post.file.url.split('/').reverse()[0]
+    //- Búsqueda de imágenes
+    a(target='_blank', href='https://www.google.com/searchbyimage?image_url='+settings.site.url+'/'+post.file.url, title='Buscar en Google Imágenes...')
+      | &nbsp;[
+      b S
+      | ]
+    //- Información del archivo
+    span(style='font-size:85%')
+      = ' ( ' + post.file.size
+      span.moculto= ', ' + post.file.resolution
+      span.nombrefile= ', ' + post.file.name
+      = ' )'
+  br
+  //- Thumb
+  //- (TODO: Expandir thumb en la misma página)
+  a(target='_blank', href='/'+post.file.url)
+    span(id='thumb'+post.postId)
+      img(src='/'+post.file.thumb, alt=post.postId, class='thumb')
+a(name=post.postId, style='position: relative; bottom: 64px; display: block;')
+if thread.postId == post.postId
+  include postMeta
+blockquote(style='word-wrap: break-word;')
+  if post.dado
+    font(color='red')
+      img(src='/images/dado.png')
+      | &nbsp;= #{post.dado}
+    br
+    br
+  | {{{#{JSON.stringify(post.message)} | renderPostMessage}}}
+  br
+  br
+  //- (TODO: Mostrar los backlinks)
+  .replybacklinks

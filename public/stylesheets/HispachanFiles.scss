@@ -1,0 +1,43 @@
+/*
+ * Hispachan Files
+ */
+ 
+$fonts: Segoe UI, sans-serif;
+
+body {
+    font: $fonts;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-weight: 100;
+}
+
+#mainContent
+{
+    padding-top: 64px;
+}
+
+.turbolinks-progress-bar {
+  visibility: hidden;
+}
+
+.ui.segment
+{
+    color: #111;
+}
+
+#footer
+{
+    margin: {top: 2em; bottom: 2em;}
+}
+
+/** Vue.js Cloaking **/
+[v-cloak], .v-loading {
+  display: none;
+}
+
+.v-loading[v-cloak]
+{
+    display: block!important;
+}

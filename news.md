@@ -1,0 +1,1 @@
+El contenido de este archivo markdown se mostrará en la sección de noticias de la página principal.
