@@ -10,7 +10,7 @@
 function postMeta(post, $) {
     let data = {};
     // ID de posteo
-    data.postId = parseInt(post.find('[title^="Responder a este post"]').first().text().trim());
+    data.postId = parseInt(post.find('.reflink').first().find('a').last().text().trim());
     // Nombre del posteador (en boards con campo de nombre)
     data.posterName = post.find("span.postername").first().text().trim();
     
@@ -26,6 +26,15 @@ function postMeta(post, $) {
     // Fecha y Hora
     let dateRe    = /(\d{1,2})\/(\d{1,2})\/(\d{1,2}) (\d{1,2}):(\d{1,2})/;
     let dateParts = post.find('[title*="Horario"]').first().text().trim().match(dateRe);
+    // Workaround temporal para hilos < Abril 2015
+    if(post.find('small').length)
+    {
+        let pObj  = post.find('small').first().parent().text().split('\n');
+        let pDate = pObj[5] || pObj[2];
+        dateRe = /(\d{1,2})\/(\d{1,2})\/(\d{1,2}).*(\d{1,2}):(\d{1,2}).*/;
+        let dP = pDate.match(dateRe);
+        dateParts = [dP[0], dP[3], dP[2], dP[1], dP[4], dP[5]];
+    }
     let date      = new Date(
         parseInt('20' + dateParts[3]),
         parseInt(dateParts[2]) -1,
