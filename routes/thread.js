@@ -80,7 +80,7 @@ router.get('/ui-search', (req, res) => {
                     re.url = `/${el.board}/res/${el.postId}.html`;
                     response.results.push(re);
                 });
-                if(num > 8) {
+                if(num > 4) {
                     response.action = { url: `/search?q=${encodeURIComponent(q)}`, text: `Ver todos los resultados (${num})` }
                 }
                 res.jsonp(response);
