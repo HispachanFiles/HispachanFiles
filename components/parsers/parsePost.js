@@ -31,6 +31,7 @@ function postMeta(post, $) {
     {
         let pObj  = post.find('small').first().parent().text().split('\n');
         let pDate = pObj[5] || pObj[2];
+        if (pObj[10]) pDate = pObj[10]; // idk, solo funciona
         dateRe = /(\d{1,2})\/(\d{1,2})\/(\d{1,2}).*(\d{1,2}):(\d{1,2}).*/;
         let dP = pDate.match(dateRe);
         dateParts = [dP[0], dP[3], dP[2], dP[1], dP[4], dP[5]];
@@ -80,6 +81,12 @@ function postMeta(post, $) {
             name: fileON,
             thumb: post.find('img.thumb').first().attr('src')
         };
+        // Workaround temporal para hilos original importados desde Web Archive al viejo hispafiles
+        if(data.file.url.substr(0, 5) == '/web/')
+        {
+            data.file.url = 'http://web.archive.org' + data.file.url;
+            data.file.thumb = 'http://web.archive.org' + data.file.thumb;
+        }
     }
     
     return data;
