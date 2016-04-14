@@ -37,7 +37,7 @@ Esta nueva versión de HispaFiles está hecha completamente desde cero, así que
  - [ ] Añadir preview de refs
  - [ ] Añadir los demás estilos (a parte de Hispachan)
  - [ ] Añadir la opción de descarga en zip
- - [ ] Añadir una página dedicada a los resultados de búsqueda
+ - [x] Añadir una página dedicada a los resultados de búsqueda
  - [ ] Añadir estadísticas publicas en la página principal (número de hilos guardados, espacio usado, etc)
 
 Si se te ocurre algo mas, o encuentras un bug, puedes [contactarme](mailto:hispachanfiles@gmail.com) o abrir una issue. O incluso mejor, podrías hacer una pull request.
