@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 Resultados de la búsqueda #{currentQuery}
+  if items.length < 1
+    center: h2 No hay resultados
+  .ui.items(ng-cloak)
+    each item in items
+      a.item(href='/'+item.board+'/res/'+item.postId+'.html')
+        .image
+          if item.file.thumb
+            img(src=item.file.thumb)
+        .content
+          .header= item.subject
+          .meta
+            span
+              i.icon.comments
+              | #{item.replyCount}
+              | respuestas.  
+              i.icon.wait
+              | {{'#{item.date}' | moment 'DD/MM/YY HH:MM'}}
+          .description: p= item.message.substr(0, 256)
+          .extra Archivado por última vez {{'#{item.lastUpdate}' | moment 'DD/MM/YY HH:MM'}}
+  //- Páginas
+  center
+    if totalPages > 1
+      .ui.pagination.menu
+        each page in pages
+          if page.type == 'page'
+            a(class=page.active?'item active':'item', href='/search?q='+ encodeURIComponent(currentQuery) +'&p='+page.num) #{page.num}
+          if page.type == 'divider'
+            .item.disabled ...

@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5
     margin: {top: 2em; bottom: 2em;}
 }
 
+#threadSearch
+{
+    width: 390px;
+}
+
 /** Vue.js Cloaking **/
 [v-cloak], .v-loading {
   display: none;
