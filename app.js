@@ -67,7 +67,11 @@ app.use(function(err, req, res, next) {
   }
   else
   {
-      res.render('error', err);
+      res.render('error', {
+          title: `Error - ${settings.site.title}`,
+          settings: settings,
+          error: err
+      });
   }
 });
 
