@@ -44,7 +44,14 @@ function postMeta(post, $) {
         parseInt(dateParts[5])
         );
     data.date = date;
-        
+    
+    // Nuevo dado [Abril 2016]
+    let dC = post.find('blockquote').first().find('span.dado');
+    if(dC.length > 0)
+    {
+        data.dado = dC.find('b').text();
+        dC.remove();
+    }
     // Mensaje
     let html = post.find('blockquote').first().html();
     // Convertir HTML a BBCode de Hispa
@@ -57,8 +64,8 @@ function postMeta(post, $) {
     html = html.replace(/<a id="embed(.*?)">(.*?)<\/a>/gmi, ""); // [Reproducir]
     post.find('blockquote').first().html(html); 
     post.find('.abbrev').first().remove();
-    // Resultado del dado
-    let dC = post.find('blockquote').first().find('font[color="red"]');
+    // Resultado del dado (antiguo)
+    dC = post.find('blockquote').first().find('font[color="red"]');
     if(dC.length > 0)
     {
         data.dado = dC.first().text().substr(2).trim();

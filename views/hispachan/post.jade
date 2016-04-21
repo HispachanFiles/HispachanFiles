@@ -29,7 +29,8 @@ blockquote(style='word-wrap: break-word;')
   if post.dado
     font(color='red')
       img(src='/images/dado.png')
-      | &nbsp;= #{post.dado}
+      | &nbsp;= 
+      b #{post.dado}
     br
     br
   | {{{#{JSON.stringify(post.message)} | renderPostMessage}}}
