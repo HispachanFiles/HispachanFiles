@@ -67,7 +67,7 @@ class HispachanFiles {
         {
             let hB = $('#hispaBox');
             let th = new Thread(hB.prop('hf-board'), hB.prop('hf-id'));
-            this.data.threadControl = th;
+            this.threadControl = th;
             th.setEvents($);
         }
         

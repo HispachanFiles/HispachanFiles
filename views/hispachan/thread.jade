@@ -17,6 +17,6 @@ block content
         table.respuesta.post(id='respuesta'+post.postId)
           tbody: tr
             td.doubledash= '>>'
-            td.reply(id='reply'+post.postId)
+            td.reply(id='reply'+post.postId, hf-id=post.postId)
               include post
     hr
