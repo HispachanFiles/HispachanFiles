@@ -7,17 +7,19 @@ import jQuery from 'jquery';
 import NProgress from 'nprogress';
 import Vue from 'vue';
 import {Archiver, archiverState} from './components/archiver';
+import {Settings, defaultSettings} from './components/settings';
 import renderPostMessage from './components/renderer';
 import Thread from './components/thread';
 
 class HispachanFiles {
     constructor() {
-        this.data = { archiver: archiverState };
+        this.data = { archiver: archiverState, settings: defaultSettings };
         // Mostrar barra de carga inicial
         NProgress.start();
         // Si no coloco jQuery en una variable global, la perra de semantic-ui deja de funcionar
         window.jQuery = jQuery;
         window.$ = jQuery;
+        this.settings = new Settings(this);
         this.assignEvents();
     }
     
@@ -49,6 +51,8 @@ class HispachanFiles {
             },
             type: 'standard'
         });
+        
+        $('#settingsBtn').click(e=>that.settings.showModal());
         
         $(document.body).on('click', '#copyBtn', e=> {
             if(document.queryCommandSupported('copy'))

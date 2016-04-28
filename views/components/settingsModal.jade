@@ -1,0 +1,19 @@
+.ui.small.modal#hfSettings
+  .header Opciones
+  .content
+    .ui.form
+      .field
+        label Estilo
+        select.ui.dropdown#hfStyle(style='color:#000000;', v-model='settings.style')
+          option(value='') Selecciona un estilo...
+          each style in settings.styles.available
+            option(value=style)=style
+      .field
+        .ui.checkbox
+          input#hfcCSS(type='checkbox', v-model='settings.useCustomCSS')
+          label CSS Personalizado
+      .field(v-if='settings.useCustomCSS')
+        textarea#customCSS(v-model='settings.customCSS')
+  .actions
+    .ui.cancel.button Cancelar
+    .ui.green.approve.button Guardar

@@ -6,7 +6,7 @@ html(lang='es')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     link(rel='stylesheet', href='/semantic/semantic.min.css')
     link(rel='stylesheet', href='/stylesheets/css/nprogress.css')
-    link(rel='stylesheet', href='/stylesheets/Hispanight.css')
+    link#mainStyle(rel='stylesheet', href='/stylesheets/'+ settings.styles.defaultStyle +'.css')
   body#app
     script(src='/dist/app.js')
     script(src='/semantic/semantic.js')
@@ -16,3 +16,4 @@ html(lang='es')
       #mainContent
         block content
       include components/footer
+    include components/settingsModal
