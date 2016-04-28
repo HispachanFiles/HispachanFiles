@@ -1,0 +1,13 @@
+.ui.top.fixed.menu#mainMenu
+  a.item(href='/', style='text-transform: lowercase;')
+    img(src='/images/top_icn.png')
+    =settings.site.title
+  .right.menu
+    //- Búsqueda en escritorio
+    if(settings.features.threadSearch)
+      .ui.item.category.search.moculto#threadSearch
+        .ui.transparent.icon.input
+          input.prompt(placeholder='Buscar Hilos...', type='text')
+          i.icon.search.link
+    a.ui.icon.item#sideToggle(href='#')
+      i.icon.sidebar
