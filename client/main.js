@@ -8,6 +8,7 @@ import NProgress from 'nprogress';
 import Vue from 'vue';
 import {Archiver, archiverState} from './components/archiver';
 import renderPostMessage from './components/renderer';
+import Thread from './components/thread';
 
 class HispachanFiles {
     constructor() {
@@ -60,6 +61,15 @@ class HispachanFiles {
                 prompt('Tu navegador no soporta el copiado. Pulsa Ctrl+C para copiar manualmente.', $('#copyBox').val())
             }
         });
+        
+        // Estamos en un Hilo
+        if($('#hispaBox').length)
+        {
+            let hB = $('#hispaBox');
+            let th = new Thread(hB.prop('hf-board'), hB.prop('hf-id'));
+            this.data.threadControl = th;
+            th.setEvents($);
+        }
         
         // Uso Vue para el parseado
         Vue.use(require('vue-moment'));

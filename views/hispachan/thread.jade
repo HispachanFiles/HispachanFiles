@@ -4,7 +4,7 @@ block content
   .v-loading(v-cloak)
     br
     center: h1 (...)
-  #hispaBox(v-cloak)
+  #hispaBox(v-cloak, hf-board=thread.board, hf-id=thread.postId)
     br
     hr
     .replymode Archivado por última vez {{ #{thread.lastUpdate} | moment 'DD/MM/YY HH:MM'}} (Hora Local).

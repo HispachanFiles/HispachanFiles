@@ -31,7 +31,8 @@ Listo, ahora tienes tu propio HispaFiles de uso personal <s>para guardar tus cep
 
 Esta nueva versión de HispaFiles está hecha completamente desde cero, así que aún hay un par de cosas que hacen falta. Esto es lo que se me ocurre de momento:
 
- - [ ] Expandir imágenes/webm en la misma página
+ - [x] Expandir imágenes en la misma página
+ - [ ] Expandir WEBMS
  - [ ] Eliminar hilos si no cumplen 2 horas de antigüedad en Hispa
  - [ ] Añadir "backlinks" a las respuestas
  - [ ] Añadir preview de refs
