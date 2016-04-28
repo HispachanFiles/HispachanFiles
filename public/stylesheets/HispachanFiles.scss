@@ -1,11 +1,52 @@
 /*
  * Hispachan Files
  */
- 
+
+#mainMenu
+{
+    background: $bg-accent;
+    .item, i { color: $fg-accent; }
+    input { 
+        color: rgba($fg-accent, .9);
+        
+        &::-webkit-input-placeholder {
+            color:    $fg-accent;
+            opacity:  0.5;
+        }
+        
+        &:-moz-placeholder {
+            color:    $fg-accent;
+            opacity:  0.5;
+        }
+        
+        &::-moz-placeholder {
+            color:    $fg-accent;
+            opacity:  0.5;
+        }
+        
+        &:-ms-input-placeholder {
+            color:    $fg-accent;
+            opacity:  0.5;
+        }
+    }
+}
+
+#nprogress
+{
+    .bar { background: $fg-accent!important; }
+    .peg { box-shadow: 0 0 10px $fg-accent, 0 0 5px $fg-accent!important; }
+    .spinner-icon { display: none; }
+}
+
 $fonts: Segoe UI, sans-serif;
 
 body {
     font: $fonts;
+    
+    .pusher
+    {
+        background: $bg-color!important;
+    }
 }
 
 h1, h2, h3, h4, h5
@@ -45,4 +86,34 @@ h1, h2, h3, h4, h5
 .v-loading[v-cloak]
 {
     display: block!important;
+}
+
+.ui.secondary.pointing.menu .item
+{
+    border-color: $fg-color!important;
+    color: $fg-color!important;
+}
+
+.ui.progress .label
+{
+    color: $fg-color!important;
+}
+
+#searchResults
+{
+    .item .content
+    {
+        .header, .description
+        {
+            color: $fg-color;
+        }
+        .meta
+        {
+            color: rgba($fg-color, .9)!important;
+        }
+        .extra
+        {
+            color: rgba($fg-color, .5)!important;
+        }
+    }
 }

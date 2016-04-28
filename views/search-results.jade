@@ -5,7 +5,7 @@ block content
     h1 Resultados de la búsqueda #{currentQuery}
     if items.length < 1
       center: h2 No hay resultados
-    .ui.items(ng-cloak)
+    .ui.items#searchResults(ng-cloak)
       each item in items
         a.item(href='/'+item.board+'/res/'+item.postId+'.html')
           .image
