@@ -14,12 +14,19 @@ html(lang='es')
       .image.item
         img(src='/images/default_banner.png')
       .item Version 0.2.1
+      //- Busqueda en móviles
+      if(settings.features.threadSearch)
+        form.mvisible#mSearch(method='get', action='search')
+          .ui.transparent.inverted.icon.input.item
+            input.prompt(placeholder='Buscar Hilos...', type='text', name='q')
+            i.inverted.circular.link.search.icon(onclick='document.getElementById("mSearch").submit();')
     .pusher
       .ui.top.fixed.menu#mainMenu
         a.item(href='/', style='text-transform: lowercase;')
           img(src='/images/top_icn.png')
           =settings.site.title
         .right.menu
+          //- Búsqueda en escritorio
           if(settings.features.threadSearch)
             .ui.item.category.search.moculto#threadSearch
               .ui.transparent.icon.input
