@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispanaranja
+ *
+ * Porteado manualmente desde hispachan.org
+ */
+
+// Colores
+$bg-color:      #FDE8CF;
+$fg-color:      #000000;
+$bg-accent:     #BD0003;
+$fg-accent:     #FFF9C4;
+$link-color:    #DD0000;
+$link-hover:    #FF7E04;
+$pb-background: #FFE0BC;
+$pb-foreground: #000000;
+$pb-border:     #FFA44E;
+$pb-highlight:  #D16500;
+$greentext:     #1A7D24;
+$ommited-posts: #484848;
+$abbrev-color:  #666666;
+$highlight-fg:  #000000;
+$highlight-bg:  #FECABE;
+$highlight-bo:  #D16500;
+$divider-color: #FFA44E;
+$code-bg:       #FFE9CE;
+$code-border:   #D16500;
+$doubledash:    #000000;
+$postername:    #117743;
+$filetitle:     #0F0C5D;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
