@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispahack
+ *
+ * Porteado manualmente desde hispachan.org
+ */
+
+// Colores
+$bg-color:      #000000;
+$fg-color:      #ACACAC;
+$bg-accent:     #31741A;
+$fg-accent:     #FFFFFF;
+$link-color:    #4DAD2D;
+$link-hover:    #FFFFFF;
+$pb-background: #171C16;
+$pb-foreground: #ACACAC;
+$pb-border:     #30392E;
+$pb-highlight:  #6DBB5B;
+$greentext:     #649A69;
+$ommited-posts: #548842;
+$abbrev-color:  #B3B3B3;
+$highlight-fg:  #FFFFFF;
+$highlight-bg:  #293526;
+$highlight-bo:  #6DBB5B;
+$divider-color: #737373;
+$code-bg:       #232B22;
+$code-border:   #5F9E51;
+$doubledash:    #409324;
+$postername:    #C1C1C1;
+$filetitle:     #4DAD2D;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
