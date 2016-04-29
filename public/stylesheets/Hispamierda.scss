@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispamierda
+ *
+ * Porteado manualmente desde hispachanfiles.org (old)
+ */
+
+// Colores
+$bg-color:      #FFFF00;
+$fg-color:      #240B3B;
+$bg-accent:     #DF0101;
+$fg-accent:     #FFFF00;
+$link-color:    #0000FF;
+$link-hover:    #5858FA;
+$pb-background: #BFFF00;
+$pb-foreground: #21211A;
+$pb-border:     #5D7F00;
+$pb-highlight:  #DF0101;
+$greentext:     #1A7D24;
+$ommited-posts: #A10000;
+$abbrev-color:  #666666;
+$highlight-fg:  #240B3B;
+$highlight-bg:  #FFAF00;
+$highlight-bo:  #DF0101;
+$divider-color: #240B3B;
+$code-bg:       #F4E9E1;
+$code-border:   #C6865E;
+$doubledash:    #240B3B;
+$postername:    #C83200;
+$filetitle:     #BF00FF;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
