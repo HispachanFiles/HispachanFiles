@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispagirl
+ *
+ * Porteado manualmente desde hispachan.org
+ */
+
+// Colores
+$bg-color:      #FAF5F9;
+$fg-color:      #3A2432;
+$bg-accent:     #BB79B7;
+$fg-accent:     #FFFFFF;
+$link-color:    #4C86A6;
+$link-hover:    #EB75E3;
+$pb-background: #F4E6F1;
+$pb-foreground: #3A2432;
+$pb-border:     #D2A1C6;
+$pb-highlight:  #9E6090;
+$greentext:     #1A7D24;
+$ommited-posts: #A35092;
+$abbrev-color:  #A35092;
+$highlight-fg:  #3A2432;
+$highlight-bg:  #F2DAED;
+$highlight-bo:  #9E6090;
+$divider-color: #D2A1C6;
+$code-bg:       #F7EDF5;
+$code-border:   #BD8BB0;
+$doubledash:    #B076AC;
+$postername:    #B076AC;
+$filetitle:     #A35092;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
