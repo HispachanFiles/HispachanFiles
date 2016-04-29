@@ -39,7 +39,7 @@ module.exports=
     styles:
     {
         // Estilos (S)CSS disponibles (colocalos en /public/stylesheets/)
-        available: ['Hispachan'],
+        available: ['Hispachan', 'Hispablue', 'Hispabook', 'Hispanaranja', 'Hispasecta', 'Hispagirl', 'Hispahack', 'Hispademon',  'Hispanight', 'Hispaenie', 'Hispagris', 'Hispamierda'],
         // Estilo por defecto
         defaultStyle: 'Hispachan'
     },

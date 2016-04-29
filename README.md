@@ -36,7 +36,7 @@ Esta nueva versión de HispaFiles está hecha completamente desde cero, así que
  - [ ] Eliminar hilos si no cumplen 2 horas de antigüedad en Hispa
  - [ ] Añadir "backlinks" a las respuestas
  - [ ] Añadir preview de refs
- - [ ] Añadir los demás estilos (a parte de Hispachan)
+ - [x] Añadir los demás estilos (a parte de Hispachan)
  - [ ] Añadir la opción de descarga en zip
  - [x] Añadir una página dedicada a los resultados de búsqueda
  - [ ] Añadir estadísticas publicas en la página principal (número de hilos guardados, espacio usado, etc)
