@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispabook
+ *
+ * Porteado manualmente desde hispachan.org
+ */
+
+// Colores
+$bg-color:      #E9EAED;
+$fg-color:      #333333;
+$bg-accent:     #3B5998;
+$fg-accent:     #FFFFFF;
+$link-color:    #3B5998;
+$link-hover:    #758EC5;
+$pb-background: #FFFFFF;
+$pb-foreground: #141823;
+$pb-border:     #DFE0E4;
+$pb-highlight:  #7E91BA;
+$greentext:     #649A69;
+$ommited-posts: #5E5E5E;
+$abbrev-color:  #5E5E5E;
+$highlight-fg:  #141823;
+$highlight-bg:  #FFFFFF;
+$highlight-bo:  #7E91BA;
+$divider-color: #ACAFB6;
+$code-bg:       #FFFFFF;
+$code-border:   #CACCD3;
+$doubledash:    #7F8187;
+$postername:    #141823;
+$filetitle:     #2F477A;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
