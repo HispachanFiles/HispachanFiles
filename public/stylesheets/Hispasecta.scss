@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispasecta
+ *
+ * Porteado manualmente desde hispachan.org
+ */
+
+// Colores
+$bg-color:      #F1F3CE;
+$fg-color:      #21211A;
+$bg-accent:     #A10000;
+$fg-accent:     #F1F3CE;
+$link-color:    #C40000;
+$link-hover:    #430000;
+$pb-background: #DFE4AE;
+$pb-foreground: #21211A;
+$pb-border:     #DFE4AE;
+$pb-highlight:  #A0A76E;
+$greentext:     #1A7D24;
+$ommited-posts: #A10000;
+$abbrev-color:  #666666;
+$highlight-fg:  #21211A;
+$highlight-bg:  #CDD490;
+$highlight-bo:  #A0A76E;;
+$divider-color: #959C5A;
+$code-bg:       #E4E9BB;
+$code-border:   #919759;
+$doubledash:    #000000;
+$postername:    #34783F;
+$filetitle:     #A10000;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
