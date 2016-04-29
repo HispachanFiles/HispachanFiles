@@ -1,0 +1,44 @@
+/*
+ * Estilo Hispagris
+ *
+ * Porteado manualmente desde hispachanfiles.org (old)
+ */
+
+// Colores
+$bg-color:      #EEEEEE;
+$fg-color:      #333333;
+$bg-accent:     #6E6E6E;
+$fg-accent:     #FFFFFF;
+$link-color:    #FF6600;
+$link-hover:    #FF3300;
+$pb-background: #DDDDDD;
+$pb-foreground: #333333;
+$pb-border:     #B3B3B3;
+$pb-highlight:  #808080;
+$greentext:     #1A7D24;
+$ommited-posts: #555555;
+$abbrev-color:  #555555;
+$highlight-fg:  #333333;
+$highlight-bg:  #CCCCCC;
+$highlight-bo:  #808080;
+$divider-color: #9A9A9A;
+$code-bg:       #EAEAEA;
+$code-border:   #808080;
+$doubledash:    #EEEEEE;
+$postername:    #004AA3;
+$filetitle:     #111111;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+// Estilos base
+@import 'HispachanFiles';
+@import 'ku/imageboard';
+@import 'ku/hispaboard';
+@import 'ku/hispamovil';
