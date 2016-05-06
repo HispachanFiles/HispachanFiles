@@ -4,7 +4,7 @@
   .item Version 0.2.5
   //- Busqueda en móviles
   if(settings.features.threadSearch)
-    form.mvisible#mSearch(method='get', action='search')
+    form.mvisible#mSearch(method='get', action='/search')
       .ui.transparent.inverted.icon.input.item
         input.prompt(placeholder='Buscar Hilos...', type='text', name='q')
         i.inverted.circular.link.search.icon(onclick='document.getElementById("mSearch").submit();')
