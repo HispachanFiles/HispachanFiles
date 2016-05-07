@@ -1,5 +1,6 @@
 extends layout
-
+block metaTags
+  meta(name='description', content=settings.site.description)
 block content
   .ui.container
     h1

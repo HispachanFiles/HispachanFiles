@@ -1,5 +1,18 @@
 extends ../layout
-
+block metaTags
+  //- Motores de búsqueda
+  //- Cáncerbook
+  meta(property='og:type', content='website')
+  meta(property='og:title', content=title)
+  meta(property='og:image', content=thread.file.thumb)
+  meta(property='og:description', content=thread.message.substr(0,147)+'...')
+  meta(property='og:site_name', settings.site.title)
+  meta(property='og:locale', 'es_ES')
+  //- Twister
+  meta(name='twitter:card', content='summary')
+  meta(name='twitter:title', content=title)
+  meta(name='twitter:description', content=thread.message.substr(0,147)+'...')
+  meta(name='twitter:image', content=thread.file.thumb)
 block content
   .v-loading(v-cloak)
     br
