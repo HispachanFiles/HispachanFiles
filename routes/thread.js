@@ -10,6 +10,9 @@ const js2xmlparser = require("js2xmlparser");
 const delThread = require('../components/deleteThread');
 
 router.get('/:board/res/:postId', (req, res, next) => {
+    // CloudFlare server push
+    res.set('Link', '</dist/app.min.js>; rel=preload, </semantic/semantic.min.css>; rel=prefetch, </stylesheets/css/nprogress.css>; rel=prefetch, </semantic/semantic.js>; rel=prefetch');
+
     let postId = req.params.postId.split('.')[0];
     let board = req.params.board;
 
@@ -92,6 +95,9 @@ router.get('/ui-search', (req, res) => {
 
 // Búsqueda avanzada
 router.get('/search', (req, res) => {
+    // CloudFlare server push
+    res.set('Link', '</dist/app.min.js>; rel=preload, </semantic/semantic.min.css>; rel=prefetch, </stylesheets/css/nprogress.css>; rel=prefetch, </semantic/semantic.js>; rel=prefetch');
+
     let q = req.query.q;
     let p = parseInt(req.query.p || 1);
     let pages = [];

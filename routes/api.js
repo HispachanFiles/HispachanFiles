@@ -20,6 +20,8 @@ function parseResponse(req, res, data, root) {
 }
 
 router.get('/', (req, res, next) => {
+    // CloudFlare server push
+    res.set('Link', '</dist/app.min.js>; rel=preload, </semantic/semantic.min.css>; rel=prefetch, </stylesheets/css/nprogress.css>; rel=prefetch, </semantic/semantic.js>; rel=prefetch');
     res.render('api', {
         title: `Api - ${publicSettings.site.title}`,
         settings: publicSettings,
