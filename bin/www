@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('HispachanAPI:server');
 var http = require('http');
-var https = require('http');
+var https = require('https');
 var serverSettings = require('../server-settings');
 
 /**
