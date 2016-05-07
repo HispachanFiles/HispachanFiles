@@ -9,6 +9,8 @@ var _ = require('lodash');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var nodemon = require('gulp-nodemon');
+var buffer = require('vinyl-buffer');
+var minify = require('gulp-minify');
 
 var config = {
   entryFile: './client/main.js',
@@ -35,6 +37,13 @@ function bundle() {
     .bundle()
     .on('error', function(err) { console.log('Error: ' + err.message); })
     .pipe(source(config.outputFile))
+    .pipe(buffer())
+    .pipe(minify({
+      ext:{
+        src:'.js',
+        min:'.min.js'
+      }
+    }))
     .pipe(gulp.dest(config.outputDir))
     .pipe(reload({ stream: true }));
 }
