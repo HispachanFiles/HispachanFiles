@@ -12,7 +12,10 @@ Este es el primer proyecto de gran escala que hago en Node, así que si hay algo
 ## Instalación Local
 
 - Instala Node.js y Mongo
-- Descarga / Clona el repositorio
+- Descarga / Clona el repositorio:
+```
+git clone --recursive https://github.com/HispachanFiles/HispachanFiles.git
+```
 - Edita los archivos de configuración (`settings.js` y `server-settings.js`).
 - Abre una terminal en la carpeta del repositorio
 - Instala las dependencias:
