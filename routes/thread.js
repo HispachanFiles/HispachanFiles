@@ -6,7 +6,6 @@ const publicSettings = require('../settings');
 const serverSettings = require('../server-settings');
 const Thread = require('../models/thread');
 const async = require('async');
-const js2xmlparser = require("js2xmlparser");
 const delThread = require('../components/deleteThread');
 
 router.get('/:board/res/:postId', (req, res, next) => {

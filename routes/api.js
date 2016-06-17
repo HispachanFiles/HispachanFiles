@@ -4,7 +4,6 @@ const express = require('express');
 const router = express.Router();
 const request = require('request');
 const cheerio = require('cheerio');
-const js2xmlparser = require("js2xmlparser");
 const parseThread = require('../components/parsers/parseThread.js');
 const parseBoard = require('../components/parsers/parseBoard.js');
 const publicSettings = require('../settings');
