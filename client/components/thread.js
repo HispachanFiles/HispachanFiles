@@ -16,10 +16,14 @@ export default class Thread
     expandThumb(imgEl)
     {
         let expandUrl = $(imgEl).parent().parent().prop('href');
-        if(expandUrl.substr(-5) == 'webm') return;
+        if(expandUrl.substr(-4) == 'webm') return;
         
         if($(imgEl).is('[expand]'))
         {
+            // Fix para imágenes muy altas
+            if ($(imgEl).height() >= $(window).height() && $(window).scrollTop() > $(imgEl).offset().top - 64) {
+                $(window).scrollLeft(0).scrollTop($(imgEl).offset().top - 64);
+            }
             $(imgEl).prop('src', $(imgEl).data('thumbUrl'));
             $(imgEl).removeAttr('expand');
             $(imgEl).removeAttr('style');
