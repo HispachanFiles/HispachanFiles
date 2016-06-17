@@ -12,6 +12,7 @@ var routes = require('./routes/index');
 var apiRoutes = require('./routes/api');
 var socketRoutes = require('./routes/socket');
 var threadRoutes = require('./routes/thread');
+var searchRoutes = require('./routes/search');
 
 var settings = require('./settings');
 var serverSettings = require('./server-settings');
@@ -43,6 +44,7 @@ app.use('/data', express.static(path.join(__dirname, 'data')));
 
 app.use('/', routes);
 app.use('/', threadRoutes);
+app.use('/', searchRoutes);
 if(settings.features.apiEnabled)
 {
     app.use('/api', apiRoutes);
