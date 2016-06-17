@@ -36,7 +36,7 @@ Esta nueva versión de HispaFiles está hecha completamente desde cero, así que
 
  - [x] Expandir imágenes en la misma página
  - [ ] Expandir WEBMS
- - [ ] Eliminar hilos si no cumplen 2 horas de antigüedad en Hispa
+ - [x] Eliminar hilos si no cumplen 2 horas de antigüedad en Hispa
  - [ ] Añadir "backlinks" a las respuestas
  - [ ] Añadir preview de refs
  - [x] Añadir los demás estilos (a parte de Hispachan)
