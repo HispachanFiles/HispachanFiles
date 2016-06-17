@@ -36,13 +36,13 @@ function postMeta(post, $) {
         let dP = pDate.match(dateRe);
         dateParts = [dP[0], dP[3], dP[2], dP[1], dP[4], dP[5]];
     }
-    let date      = new Date(
+    let date      = new Date(Date.UTC(
         parseInt('20' + dateParts[3]),
         parseInt(dateParts[2]) -1,
         parseInt(dateParts[1]),
         parseInt(dateParts[4]),
         parseInt(dateParts[5])
-        );
+    ));
     data.date = date;
     
     // Nuevo dado [Abril 2016]
