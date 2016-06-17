@@ -13,6 +13,7 @@ const request  = require('request');
 const glob     = require('glob');
 
 const Thread   = require('../../models/thread');
+const ArchiverTimer = require('./timer');
 const Elapsed  = require('elapsed');
 
 class Archiver {
@@ -108,10 +109,10 @@ class Archiver {
             }
             // Verificar si el hilo tiene mas de 2 horas
             let elapsed = new Elapsed(thread.data.date, new Date());
-            if(elapsed.hours < 2)
+            if(elapsed.hours.num < 2)
             {
-                // TODO: Añadir un setInterval que verifique el hilo cada 5 minutos y lo elimine si da 404
-                // antes de que cumpla 2 horas (excepto si lo eliminó OP, en ese caso se queda para arderle el culito)
+                // El hilo tiene menos de 2 horas de antigüedad, mejor vigilarlo un poco...
+                new ArchiverTimer(thread.data);
             }
             // Reportar al navegador
             if (that.current.by.connected) {
