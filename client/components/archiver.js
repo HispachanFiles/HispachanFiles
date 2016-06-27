@@ -78,7 +78,7 @@ export class Archiver
     checkUrl()
     {
         let url = urlParse(this.url);
-        if(url.hostname != 'www.hispachan.org' && url.hostname != 'www.hispachanfiles.org')
+        if(url.hostname != 'www.hispachan.org' && url.hostname != 'hispachanfiles.cloudapp.net')
         {
             return 'Esta URL no pertenece a Hispachan ni a Hispachan Files';
         }
