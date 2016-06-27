@@ -8,7 +8,7 @@ block content
       a(href='https://www.hispachan.org/') hispachan.org
       |.
     .ui.icon.input(style='width: 100%;', v-bind:class='archiver.working ? ["disabled", "loading"] : []')
-      input(placeholder='Introduce una URL de Hispachan o Hispachan Files (old).', type='text', v-model='archiver.url', :disabled='archiver.working')
+      input(placeholder='Introduce una URL de Hispachan', type='text', v-model='archiver.url', :disabled='archiver.working')
       i.icon.save.link#saveBtn(v-bind:class='archiver.working ? [] : ["inverted", "circular"]')              
     div(v-cloak, v-show='archiver.started', style='margin-top: 2em;')
       .ui.active.progress#archiverProgress

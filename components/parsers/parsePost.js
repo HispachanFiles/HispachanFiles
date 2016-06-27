@@ -13,7 +13,6 @@ function postMeta(post, $) {
     data.postId = parseInt(post.find('.reflink').first().find('a').last().text().trim());
     // Nombre del posteador (en boards con campo de nombre)
     data.posterName = post.find("span.postername").first().text().trim();
-    
         
     // Bandera
     if (post.find(".bandera").length > 0) {
@@ -26,16 +25,6 @@ function postMeta(post, $) {
     // Fecha y Hora
     let dateRe    = /(\d{1,2})\/(\d{1,2})\/(\d{1,2}) (\d{1,2}):(\d{1,2})/;
     let dateParts = post.find('[title*="Horario"]').first().text().trim().match(dateRe);
-    // Workaround temporal para hilos < Abril 2015
-    if(post.find('small').length)
-    {
-        let pObj  = post.find('small').first().parent().text().split('\n');
-        let pDate = pObj[5] || pObj[2];
-        if (pObj[10]) pDate = pObj[10]; // idk, solo funciona
-        dateRe = /(\d{1,2})\/(\d{1,2})\/(\d{1,2}).*(\d{1,2}):(\d{1,2}).*/;
-        let dP = pDate.match(dateRe);
-        dateParts = [dP[0], dP[3], dP[2], dP[1], dP[4], dP[5]];
-    }
     let date      = new Date(Date.UTC(
         parseInt('20' + dateParts[3]),
         parseInt(dateParts[2]) -1,
@@ -64,13 +53,6 @@ function postMeta(post, $) {
     html = html.replace(/<a id="embed(.*?)">(.*?)<\/a>/gmi, ""); // [Reproducir]
     post.find('blockquote').first().html(html); 
     post.find('.abbrev').first().remove();
-    // Resultado del dado (antiguo)
-    dC = post.find('blockquote').first().find('font[color="red"]');
-    if(dC.length > 0)
-    {
-        data.dado = dC.first().text().substr(2).trim();
-        dC.remove();
-    }
     data.message = post.find('blockquote').first().text().trim().replace(/(\r\n|\r)/gm, "\n");
     
     // Archivo
@@ -88,12 +70,6 @@ function postMeta(post, $) {
             name: fileON,
             thumb: post.find('img.thumb').first().attr('src')
         };
-        // Workaround temporal para hilos original importados desde Web Archive al viejo hispafiles
-        if(data.file.url.substr(0, 5) == '/web/')
-        {
-            data.file.url = 'http://web.archive.org' + data.file.url;
-            data.file.thumb = 'http://web.archive.org' + data.file.thumb;
-        }
     }
     
     return data;

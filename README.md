@@ -45,9 +45,3 @@ Esta nueva versión de HispaFiles está hecha completamente desde cero, así que
  - [ ] Añadir estadísticas publicas en la página principal (número de hilos guardados, espacio usado, etc)
 
 Si se te ocurre algo mas, o encuentras un bug, puedes [contactarme](mailto:hispachanfiles@gmail.com) o abrir una issue. O incluso mejor, podrías hacer una pull request.
-
-## ¿Qué pasará con el anterior HispaFiles?
-
-Los datos siguen ahí. Si quieres recuperar un hilo guardado en el antiguo HispaFiles, solo pon su URL en el nuevo [HispaFiles](https://www.hispachanfiles.org/).
-
-Ten en cuenta que esto no servirá en la versión presente en este repo, deberás hacerlo en la página oficial.
