@@ -16,7 +16,7 @@ module.exports = socket => {
         catch (e) {
             socket.emit('queueFailed', 'URL Inválida');
         }
-        if (urlInfo.hostname != 'www.hispachan.org' && urlInfo.hostname != 'hispachanfiles.cloudapp.net') {
+        if (urlInfo.hostname != 'www.hispachan.org' && urlInfo.hostname != 'www.hispachanfiles.org') {
             socket.emit('queueFailed', 'Esta URL no pertenece a Hispachan ni a Hispachan Files');
             return;
         }
