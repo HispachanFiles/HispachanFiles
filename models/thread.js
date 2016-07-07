@@ -17,6 +17,7 @@ module.exports = mongoose.model('Thread', {
     date: Date,
     lastUpdate: { type: Date, default: Date.now },
     dado: String,
+    fortuna: String,
     message: String,
     file: {
         url: String,
@@ -34,6 +35,7 @@ module.exports = mongoose.model('Thread', {
         flag: String,
         date: Date,
         dado: String,
+        fortuna: String,
         message: String,
         file: {
             url: String,

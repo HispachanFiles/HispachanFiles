@@ -33,6 +33,12 @@ blockquote(style='word-wrap: break-word;')
       b #{post.dado}
     br
     br
+  //- Fortunitas :3
+  if post.fortuna
+    font(color='red')
+      b Tu fortuna: #{post.fortuna}
+      br
+      br
   | {{{#{JSON.stringify(post.message)} | renderPostMessage}}}
   br
   br

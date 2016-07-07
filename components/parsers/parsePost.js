@@ -41,6 +41,19 @@ function postMeta(post, $) {
         data.dado = dC.find('b').text();
         dC.remove();
     }
+
+    // Fortunas [Julio 2016]
+    let fort = post.find('blockquote').first().find('font[color="red"]')
+    if(fort.length > 0)
+    {
+        let fortxt = fort.find('b').text();
+        if(fortxt.substr(0, 11) == 'Tu fortuna:')
+        {
+            data.fortuna = fortxt.substr(11).trim();
+            fort.remove();
+        }
+    }
+
     // Mensaje
     let html = post.find('blockquote').first().html();
     // Convertir HTML a BBCode de Hispa
