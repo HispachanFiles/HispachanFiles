@@ -17,7 +17,9 @@ export default class Thread
     {
         let expandUrl = $(imgEl).parent().parent().prop('href');
         if(expandUrl.substr(-4) == 'webm') return;
-        
+        if(expandUrl.substr(-3) == 'pdf') return;
+        if(expandUrl.substr(-3) == 'swf') return;
+
         if($(imgEl).is('[expand]'))
         {
             // Fix para imágenes muy altas

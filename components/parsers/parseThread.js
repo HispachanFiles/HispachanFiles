@@ -14,7 +14,7 @@ function threadMeta(thread, $) {
     // Metadatos básicos
     data = postMeta(thread);
     data.board = $('input[name="board"]').val();
-    data.subject = $('span.filetitle').first().text().replace(/(\r\n|\n|\r)/gm, "");
+    data.subject = thread.find('span.filetitle').first().text().replace(/(\r\n|\n|\r)/gm, "");
     var replies = thread.find(".reply");
     data.replyCount = replies.length;
     var omitted = thread.find(".omittedposts");
